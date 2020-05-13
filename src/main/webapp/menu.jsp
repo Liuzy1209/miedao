@@ -146,12 +146,14 @@
 		<div class="wares-box">
 			<div class="wares-info">
 				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">参鸡汤</p>
-					<p class="monney">&yen;50.00</p>
+					<a href="menu-info.jsp?id='1'">
+						<img src="static/image/purchases/pur-12.png" alt="">
+						<p class="title" style="color: black">鸡蛋干蒜薹炒虾仁</p>
+					</a>
+					<%--<p class="monney">&yen;50.00</p>--%>
 					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
+						<p><img src="static/image/personalCenter/xiaokeai.jpg" style="width: 30px"> admin</p>
+						<p><img src="static/image/other/like2.png" style="width: 12px">0</p>
 					</div>
 				</div>
 				<%--<div class="wares">
