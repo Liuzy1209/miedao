@@ -75,7 +75,7 @@
                                 <a href="register.jsp" style="color: white">注册</a>
                             </div>
                             <%--<div class="pull-left"><a href="about.jsp">关于豆果</a></div>
-								<div class="pull-left"><a href="contact.jsp">联系豆子</a></div>--%>
+							<div class="pull-left"><a href="contact.jsp">联系豆子</a></div>--%>
                             <div class="pull-left">
                                 <div class="search" style="width: 150px;height: 30px; display: flex;color: black">
                                     <input  style="width: 200px;height: 30px;margin-top: 8px" type="text" placeholder="请输入..." name="" id="" value="" />
