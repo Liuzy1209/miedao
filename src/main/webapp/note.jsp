@@ -51,11 +51,13 @@
                                 |
                                 <a href="register.jsp" style="color: white">注册</a>
                             </div>
-                            <div class="pull-left"><a href="about.jsp" style="color: white">关于豆果</a></div>
-                            <div class="pull-left"><a href="contact.jsp" style="color: white">联系豆子</a></div>
+                            <%--<div class="pull-left"><a href="about.jsp">关于豆果</a></div>
+								<div class="pull-left"><a href="contact.jsp">联系豆子</a></div>--%>
                             <div class="pull-left">
-                                <!-- <input type="text" name="" id="search"> -->
-                                <button class='search'></button>
+                                <div class="search" style="width: 150px;height: 30px; display: flex;color: black">
+                                    <input  style="width: 200px;height: 30px;margin-top: 8px" type="text" placeholder="请输入..." name="" id="" value="" />
+                                    <button class="btn btn-default register-btn" style="margin-top: 8px;margin-bottom: -8px">搜索</button>
+                                </div>
                             </div>
                         </div>
                     </div>

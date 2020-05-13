@@ -50,11 +50,13 @@
 									|
 									<a href="register.jsp">注册</a>
 								</div>
-								<div class="pull-left"><a href="about.jsp">关于豆果</a></div>
-								<div class="pull-left"><a href="contact.jsp">联系豆子</a></div>
+								<%--<div class="pull-left"><a href="about.jsp">关于豆果</a></div>
+								<div class="pull-left"><a href="contact.jsp">联系豆子</a></div>--%>
 								<div class="pull-left">
-									<!-- <input type="text" name="" id="search"> -->
-									<button class='search'></button>
+									<div class="search" style="width: 150px;height: 30px; display: flex;color: black">
+										<input  style="width: 200px;height: 30px;margin-top: 8px" type="text" placeholder="请输入..." name="" id="" value="" />
+										<button class="btn btn-default register-btn" style="margin-top: 8px;margin-bottom: -8px">搜索</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -147,13 +149,13 @@
 			<div class="wares-info">
 				<div class="wares">
 					<a href="menu-info.jsp?id='1'">
-						<img src="static/image/purchases/pur-12.png" alt="  ">
+						<img src="static/image/purchases/pur-12.png" alt="">
 						<p class="title" style="color: black">鸡蛋干蒜薹炒虾仁</p>
 					</a>
 					<%--<p class="monney">&yen;50.00</p>--%>
 					<div class="chik-info">
 						<p><img src="static/image/personalCenter/xiaokeai.jpg" style="width: 30px"> admin</p>
-						<p><img src="static/image/other/like2.png" style="width: 12px">0</p>
+						<p><img src="static/image/other/like2.png" style="width: 12px;margin-right: 10px;margin-bottom: 2px">0</p>
 					</div>
 				</div>
 				<%--<div class="wares">
