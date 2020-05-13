@@ -147,7 +147,7 @@
 			<div class="wares-info">
 				<div class="wares">
 					<a href="menu-info.jsp?id='1'">
-						<img src="static/image/purchases/pur-12.png" alt="  ">
+						<img src="static/image/purchases/pur-12.png" alt="">
 						<p class="title" style="color: black">鸡蛋干蒜薹炒虾仁</p>
 					</a>
 					<%--<p class="monney">&yen;50.00</p>--%>
