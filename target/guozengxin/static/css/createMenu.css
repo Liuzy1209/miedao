@@ -1,0 +1,374 @@
+#content {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+.clearfix {
+    zoom: 1;
+}
+#left {
+    width: 690px;
+    float: left;
+}
+.draft-tip {
+    text-align: center;
+    display: none;
+}
+.draft-tip span {
+    display: inline-block;
+    padding: 0 20px;
+    height: 37px;
+    line-height: 37px;
+    background: rgba(51, 51, 51, 0.3);
+    border-radius: 37px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.coverImageUrl {
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    left: 0;
+    top: 0;
+}
+input, textarea, select, button {
+    font: 12px Tahoma,Geneva,"Microsoft Yahei";
+    outline: 0;
+}
+.buzhou {
+    display: none;
+}
+.mt20 {
+    margin-top: 20px;
+}
+input[type="button"], input[type="text"], input[type="password"] {
+    -webkit-appearance: none;
+    outline: none;
+    box-shadow: none;
+}
+.cover {
+    position: relative;
+}
+.cover .upbefore {
+    width: 690px;
+    height: 390px;
+    border-radius: 8px;
+    background: #eee url("../image/other/add.png") no-repeat center 140px;
+}
+.cover .upbefore .tiptxt {
+    padding-top: 225px;
+    text-align: center;
+    color: #999;
+    font-size: 15px;
+    line-height: 20px;
+}
+.cover .tiptxt p {
+    font-size: 13px;
+}
+.cover .upnow, .cover .upsucc {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+}
+.cover .upnow {
+    z-index: 3;
+    width: 690px;
+    height: 390px;
+    border-radius: 8px;
+    background: #eee url("../image/other/loading.gif") no-repeat center center;
+    color: #999;
+    font-size: 13px;
+    line-height: 450px;
+    text-align: center;
+}
+.cover .upnow, .cover .upsucc {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+}
+.cover .upsucc {
+    z-index: 3;
+    width: 690px;
+    height: 390px;
+    background: #eee;
+    overflow: hidden;
+}
+.cover .reset-upcover {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 11px;
+    top: 14px;
+    background: url("../image/other/refresh1.png") no-repeat 0 0%;
+    background-size: auto;
+    background-size: 100%;
+}
+input, textarea, select, button {
+    font: 12px Tahoma,Geneva,"Microsoft Yahei";
+    outline: 0;
+}
+.caogao {
+    display: inline-block;
+    top: 0;
+    left: 100%;
+    margin-top: 100px;
+    position: absolute;
+    text-decoration: none;
+    width: 203px;
+    z-index: 9;
+}
+.caogao .sydimg {
+    position: relative;
+    display: none;
+    width: 170px;
+    height: 400px;
+    background: #dbe9e9;
+    float: left;
+    padding: 20px;
+    overflow: hidden;
+}
+.sydimg .list {
+    width: 133px;
+    height: 360px;
+    overflow: hidden;
+}
+.sydimg .listbox {
+    overflow: scroll;
+    padding-top: 5px;
+    height: 377px;
+    width: 150px;
+}
+ol, ul, li {
+    list-style: none;
+}
+.caogao .muti {
+    float: left;
+    word-wrap: break-word;
+    color: #fff;
+    font-size: 14px;
+    width: 32px;
+    line-height: 20px;
+    padding: 8px 0 5px 0;
+    text-align: center;
+    background-color: #6fbfb1;
+    -moz-border-radius: 0px 3px 3px 0;
+    -khtml-border-radius: 0px 3px 3px 0 0;
+    -webkit-border-radius: 0px 3px 3px 0;
+    border-radius: 0px 3px 3px 0;
+}
+.caogao .muti span {
+    display: block;
+    width: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+.shannum {
+    display: inline-block;
+}
+.name {
+    margin: 20px 0;
+    height: 42px;
+}
+.name .upname {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    background: #FFF;
+    border: 1px solid #E5E3DF;
+    border-radius: 4px;
+    /*color: #ccc;*/
+    font-size: 16px;
+    padding: 0 12px;
+}
+.name .fcbm {
+    color: #333;
+}
+input[type="button"], input[type="text"], input[type="password"] {
+    -webkit-appearance: none;
+    outline: none;
+    box-shadow: none;
+}
+input, textarea, select, button {
+    font: 12px Tahoma,Geneva,"Microsoft Yahei";
+    font-size: 12px;
+    line-height: normal;
+    outline: 0;
+}
+.material {
+    border-bottom: 1px solid #E5E3DF;
+    padding: 20px 0;
+}
+.material h2 {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+.material .mlist {
+    margin: 20px 0 10px;
+    background: #F1F7FA;
+    border-radius: 8px;
+}
+.material > div {
+    padding: 20px 0 20px 12px;
+}
+.material .liaotit {
+    width: 305px;
+    margin-right: 16px;
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.material .liangtit {
+    width: 200px;
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.material .mct {
+    padding: 8px 0;
+}
+.material .liaoext {
+    margin-right: 16px;
+}
+.material input {
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid #E5E3DF;
+    border-radius: 4px;
+    float: left;
+    padding: 0 10px;
+    color: #999;
+    display: inline-block;
+    width: 305px;
+}
+input[type="button"], input[type="text"], input[type="password"] {
+    -webkit-appearance: none;
+    outline: none;
+    box-shadow: none;
+}
+input, textarea, select, button {
+    font: 12px Tahoma,Geneva,"Microsoft Yahei";
+    line-height: normal;
+    outline: 0;
+}
+.material .liangext {
+    width: 200px;
+}
+.material .fcbm {
+    color: #333;
+}
+.material .adlan {
+    font-size: 16px;
+    line-height: 16px;
+    color: #256DC6;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+.step {
+    padding: 20px 0;
+    border-bottom: 1px solid #E5E3DF;
+}
+.step h2 {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+.step .nsetp {
+    position: relative;
+    height: 200px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    box-sizing: content-box;
+    padding-left: 646px;
+}
+.step textarea {
+    display: inline-block;
+    position: absolute;
+    padding: 12px 10px;
+    left: 0px;
+    width: 500px;
+    height: 200px;
+    resize: none;
+    border-radius: 4px;
+    border: 1px solid #E5E3DF;
+    font-size: 15px;
+    color: #333;
+}
+.step .addstep {
+    display: block;
+    font-size: 15px;
+    color: #256DC6;
+    line-height: 16px;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+.tips {
+    padding: 20px 0;
+    border-bottom: 1px solid #E5E3DF;
+}
+.tips h2 {
+    font-size: 24px;
+    color: #333;
+    line-height: 20px;
+    font-weight: bold;
+}
+.tips .fcbm {
+    color: #333;
+}
+.tips textarea {
+    display: inline-block;
+    resize: none;
+    width: 690px;
+    height: 170px;
+    margin: 20px 0;
+    padding: 12px;
+    border: 1px solid #E5E3DF;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 27px;
+    color: #ccc;
+}
+.complete {
+    margin-bottom: 20px;
+    font-size: 0;
+}
+.complete .submit {
+    background: #FFB31A;
+    color: #fff;
+}
+.complete a {
+    display: inline-block;
+    width: 168px;
+    height: 42px;
+    margin-right: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 42px;
+    text-align: center;
+}
+.material .wrng {
+    background: url("../image/other/delete1.png") no-repeat;
+    background-size: auto;
+    background-size: 24px;
+}
+.material .up, .material .down, .material .add, .material .wrng {
+    display: block;
+    float: left;
+    margin-left: 8px;
+    margin-top: 8px;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+}

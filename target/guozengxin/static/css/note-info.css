@@ -1,0 +1,234 @@
+#content.recipe-content {
+
+}
+#content {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-left: 150px;
+}
+#left {
+    width: 690px;
+    float: left;
+}
+<!-- 封面图 -->
+
+.relative {
+    position: relative;
+}
+#banner {
+    display: block;
+    width: 690px;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+.wb100 {
+    display: block;
+    width: 100%;
+}
+img {
+    vertical-align: bottom;
+}
+<!-- 菜谱名称，昵称，关注 -->
+
+.rinfo {
+    margin-top: 20px;
+    padding: 9px 0 40px;
+}
+.rinfo .title {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+}
+.vcnum {
+    font-size: 13px;
+    color: #333;
+    margin-top: 20px;
+}
+.vcnum span {
+    font-size: 24px;
+    color: #FFB31A;
+    position: relative;
+    /*top: 2px;*/
+}
+.operate {
+    right: 0;
+    display: inline-block;
+    top: -3px;
+    float: right;
+}
+.operate .btn-collect {
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #FFB31A;
+    font-size: 15px;
+    text-align: center;
+    line-height: 32px;
+    background: #FFB31A url('../image/other/star.png') no-repeat 15px 10px;
+    padding-left: 20px;
+}
+.rinfo .aut-info {
+    font-size: 16px;
+    color: #666;
+    margin: 25px 0;
+}
+.left {
+    float: left;
+}
+.rinfo .author-info {
+    font-size: 16px;
+    color: #666;
+    margin-left: 6px;
+    position: relative;
+    margin-right: 20px;
+}
+.rinfo .nickname {
+    font-size: 13px;
+    color: #333;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.text-lips {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.rinfo .gz {
+    float: left;
+    height: 30px;
+    width: 73px;
+    line-height: 28px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.rinfo .addicon {
+    font-size: 14px;
+}
+
+
+
+<!-- 评论 -->
+.mini-title {
+    font-size: 18px;
+    color: #333;
+    line-height: 18px;
+    font-weight: bold;
+    margin: 30px 0 20px;
+}
+#comment .in-comment {
+    padding-bottom: 20px;
+    position: relative;
+}
+#comment .in-comment .comm-txt {
+    width: 690px;
+    height: 112px;
+    resize: none;
+    padding: 12px;
+    border: 1px solid #E5E3DF;
+    border-radius: 4px;
+}
+#comment .in-comment > .comm-btn {
+    float: right;
+    color: #FFB31A;
+    right: 0;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 4px;
+    height: 34px;
+    width: 104px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 15px;
+    border: 1px solid #FFB31A;
+}
+#comments {
+    padding-bottom: 40px;
+}
+ul {
+    list-style: none;
+}
+#comments li {
+    padding: 20px 0;
+    border-bottom: 1px solid #E5E3DF;
+    position: relative;
+}
+li {
+    list-style: none;
+}
+#comment .author-img {
+    float: left;
+}
+#comments .author-img img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+#comments .author-comment {
+    margin-left: 10px;
+    width: 627px;
+}
+.author-comment {
+    float: left;
+}
+#comments .author-comment .nickname {
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 6px;
+}
+#comments .author-comment .commtxt {
+    font-size: 15px;
+    color: #333;
+    margin-top: 6px;
+    line-height: 24px;
+}
+.operate .hascoll {
+    background: #FFB31A url('../image/other/star22.png') no-repeat 7px 10px;
+    padding-left: 17px;
+}
+
+.like {
+    background: url('../image/other/liked.png') no-repeat 20px 10px;
+    background-size: 16px;
+    float: left;
+    -webkit-user-select: none;
+    cursor: pointer;
+    height: 34px;
+    line-height: 32px;
+    font-size: 15px;
+    display: block;
+    width: 80px;
+    padding-left: 24px;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.not-like {
+    float: left;
+    -webkit-user-select: none;
+    cursor: pointer;
+    background: url('../image/other/ylike1.png') no-repeat 20px 10px;
+    background-size: 16px;
+    height: 34px;
+    line-height: 32px;
+    font-size: 15px;
+    display: block;
+    width: 80px;
+    padding-left: 24px;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 15px;
+}

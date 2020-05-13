@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guozengxin.miedao.mapper.ConcernMapper">
+  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.Concern">
+    <id column="c_id" jdbcType="INTEGER" property="c_id" />
+    <result column="u_id" jdbcType="INTEGER" property="u_id" />
+    <result column="c_u_id" jdbcType="INTEGER" property="c_u_id" />
+    <result column="c_remark" jdbcType="VARCHAR" property="c_remark" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from concern
+    where c_id = #{c_id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.guozengxin.miedao.model.Concern">
+    <selectKey keyProperty="c_id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into concern (u_id, c_u_id, c_remark
+      )
+    values (#{u_id,jdbcType=INTEGER}, #{c_u_id,jdbcType=INTEGER}, #{c_remark,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.Concern">
+    update concern
+    set u_id = #{u_id,jdbcType=INTEGER},
+      c_u_id = #{c_u_id,jdbcType=INTEGER},
+      c_remark = #{c_remark,jdbcType=VARCHAR}
+    where c_id = #{c_id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select c_id, u_id, c_u_id, c_remark
+    from concern
+    where c_id = #{c_id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select c_id, u_id, c_u_id, c_remark
+    from concern
+  </select>
+
+</mapper>

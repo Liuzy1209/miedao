@@ -1,0 +1,128 @@
+* {
+	box-sizing: border-box;
+}
+#content {
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+.person-info {
+	margin: 40px 0 20px;
+	padding-bottom: 40px;
+}
+.person-info .person-img {
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	margin-right: 12px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.left {
+	float: left;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+.person-info .info {
+	width: 480px;
+	position: relative;
+}
+.person-info .info .nickname {
+	display: inline-block;
+	max-width: 296px;
+	margin-top: 9px;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+.person-info .info .sex {
+	margin-top: 8px;
+}
+.person-info .info p {
+	margin-top: 11px;
+	font-size: 12px;
+	line-height: 16px;
+	color: #666;
+}
+.person-info .info p {
+	margin-top: 11px;
+	font-size: 12px;
+	line-height: 16px;
+	color: #666;
+}
+.right {
+	float: right;
+}
+.person-info .fav-fans {
+	width: 320px;
+	height: 62px;
+	padding: 15px 0;
+	border-radius: 4px;
+	background: #F1F7FA;
+	text-align: center;
+}
+.person-info .fav-fans > div:last-child {
+	border-right: 0;
+}
+.person-info .fav-fans > div {
+	width: 80px;
+	border-right: 1px solid #D1DFE6;
+
+}
+.fav-fans .count {
+	font-size: 15px;
+	line-height: 15px;
+}
+.fav-fans .text {
+	margin-top: 4px;
+}
+.type-head {
+	margin-bottom: 34px;
+}
+.type-head {
+	font-size: 14px;
+	text-align: center;
+	width: auto;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	display: inline-block;
+}
+.type-head a {
+	display: inline-block;
+	float: left;
+	color: #383830;
+	height: 42px;
+	line-height: 42px;
+	margin-right: 30px;
+}
+.not-menu {
+	width: 1000px;
+	margin: 80px 0 330px;
+	font-size: 13px;
+	text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+.fcc {
+	font-size: 13px;
+	color: #333;
+	line-height: 13px;
+	padding: 80px 0 10px;
+	padding-top: 80px;
+}
+body, div, img, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, a, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-right-color: currentcolor;
+	border-right-style: none;
+	border-right-width: 0px;
+	outline: 0;
+}

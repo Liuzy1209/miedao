@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guozengxin.miedao.mapper.NoteCollectMapper">
+  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.NoteCollect">
+    <id column="n_c_id" jdbcType="INTEGER" property="n_c_id" />
+    <result column="u_id" jdbcType="INTEGER" property="u_id" />
+    <result column="n_id" jdbcType="INTEGER" property="n_id" />
+    <result column="n_c_remark" jdbcType="VARCHAR" property="n_c_remark" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from note_collect
+    where n_c_id = #{n_c_id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.guozengxin.miedao.model.NoteCollect">
+    <selectKey keyProperty="n_c_id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into note_collect (u_id, n_id, n_c_remark
+      )
+    values (#{u_id,jdbcType=INTEGER}, #{n_id,jdbcType=INTEGER}, #{n_c_remark,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.NoteCollect">
+    update note_collect
+    set u_id = #{u_id,jdbcType=INTEGER},
+      n_id = #{n_id,jdbcType=INTEGER},
+      n_c_remark = #{n_c_remark,jdbcType=VARCHAR}
+    where n_c_id = #{n_c_id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select n_c_id, u_id, n_id, n_c_remark
+    from note_collect
+    where n_c_id = #{n_c_id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select n_c_id, u_id, n_id, n_c_remark
+    from note_collect
+  </select>
+
+</mapper>

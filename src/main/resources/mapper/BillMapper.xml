@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guozengxin.miedao.mapper.BillMapper">
+  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.Bill">
+    <id column="b_id" jdbcType="INTEGER" property="b_id" />
+    <result column="b_pic" jdbcType="VARCHAR" property="b_pic" />
+    <result column="b_remark" jdbcType="VARCHAR" property="b_remark" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from bill
+    where b_id = #{b_id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.guozengxin.miedao.model.Bill">
+    <selectKey keyProperty="b_id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into bill (b_pic, b_remark)
+    values (#{b_pic,jdbcType=VARCHAR}, #{b_remark,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.Bill">
+    update bill
+    set b_pic = #{b_pic,jdbcType=VARCHAR},
+      b_remark = #{b_remark,jdbcType=VARCHAR}
+    where b_id = #{b_id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select b_id, b_pic, b_remark
+    from bill
+    where b_id = #{b_id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select b_id, b_pic, b_remark
+    from bill
+  </select>
+</mapper>
