@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Author: 郭增鑫
@@ -29,14 +30,23 @@ public class MenuController {
     private HttpServletRequest request;
 
 
-
-    /*
-    * 上传菜谱*/
     @RequestMapping("/save.do")
     @ResponseBody
-    public ResponseResult uploadImage(Menu menu){
-        System.out.println(menu);
+    public ResponseResult uploadImage(Menu menu) {
         menuService.save(menu);
+        //System.out.println();
         return ResponseResult.success(1);
     }
+
+
+    /*
+    * 查询所有菜谱展示*/
+    @RequestMapping("/find_all.do")
+    @ResponseBody
+    public ResponseResult findAll(){
+        System.out.println("succcccc");
+        List<Menu> menus = menuService.findAll();
+        return ResponseResult.success(menus);
+    }
+
 }

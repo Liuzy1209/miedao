@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guozengxin.miedao.mapper.MenuViewMapper">
-  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.MenuView">
-    <id column="m_v_id" jdbcType="INTEGER" property="m_v_id" />
-    <result column="u_id" jdbcType="INTEGER" property="u_id" />
-    <result column="m_id" jdbcType="INTEGER" property="m_id" />
-    <result column="m_v_comment" jdbcType="VARCHAR" property="m_v_comment" />
-    <result column="m_v_remark" jdbcType="VARCHAR" property="m_v_remark" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.guozengxin.miedao.mapper.MenuViewMapper" >
+  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.MenuView" >
+    <id column="m_v_id" property="m_v_id" jdbcType="INTEGER" />
+    <result column="u_id" property="u_id" jdbcType="INTEGER" />
+    <result column="m_id" property="m_id" jdbcType="INTEGER" />
+    <result column="m_v_comment" property="m_v_comment" jdbcType="VARCHAR" />
+    <result column="m_v_remark" property="m_v_remark" jdbcType="VARCHAR" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from menu_view
     where m_v_id = #{m_v_id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guozengxin.miedao.model.MenuView">
-    <selectKey keyProperty="m_v_id" order="AFTER" resultType="java.lang.Integer">
+  <insert id="insert" parameterType="com.guozengxin.miedao.model.MenuView" >
+    <selectKey resultType="java.lang.Integer" keyProperty="m_v_id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into menu_view (u_id, m_id, m_v_comment, 
@@ -21,7 +21,7 @@
     values (#{u_id,jdbcType=INTEGER}, #{m_id,jdbcType=INTEGER}, #{m_v_comment,jdbcType=VARCHAR}, 
       #{m_v_remark,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.MenuView">
+  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.MenuView" >
     update menu_view
     set u_id = #{u_id,jdbcType=INTEGER},
       m_id = #{m_id,jdbcType=INTEGER},
@@ -29,14 +29,13 @@
       m_v_remark = #{m_v_remark,jdbcType=VARCHAR}
     where m_v_id = #{m_v_id,jdbcType=INTEGER}
   </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select m_v_id, u_id, m_id, m_v_comment, m_v_remark
     from menu_view
     where m_v_id = #{m_v_id,jdbcType=INTEGER}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap">
+  <select id="selectAll" resultMap="BaseResultMap" >
     select m_v_id, u_id, m_id, m_v_comment, m_v_remark
     from menu_view
   </select>
-
 </mapper>

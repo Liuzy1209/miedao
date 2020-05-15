@@ -1,41 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guozengxin.miedao.mapper.MenuMapper">
-  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.Menu">
-    <id column="m_id" jdbcType="INTEGER" property="m_id" />
-    <result column="m_name" jdbcType="VARCHAR" property="m_name" />
-    <result column="m_title" jdbcType="VARCHAR" property="m_title" />
-    <result column="m_pic" jdbcType="VARCHAR" property="m_pic" />
-    <result column="m_material" jdbcType="VARCHAR" property="m_material" />
-    <result column="m_step" jdbcType="VARCHAR" property="m_step" />
-    <result column="m_summary" jdbcType="VARCHAR" property="m_summary" />
-    <result column="m_time" jdbcType="TIMESTAMP" property="m_time" />
-    <result column="m_likes" jdbcType="INTEGER" property="m_likes" />
-    <result column="u_id" jdbcType="INTEGER" property="u_id" />
-    <result column="u_pic" jdbcType="VARCHAR" property="u_pic" />
-    <result column="m_remark" jdbcType="VARCHAR" property="m_remark" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.guozengxin.miedao.mapper.MenuMapper" >
+  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.Menu" >
+    <id column="m_id" property="m_id" jdbcType="INTEGER" />
+    <result column="m_name" property="m_name" jdbcType="VARCHAR" />
+    <result column="m_pic" property="m_pic" jdbcType="VARCHAR" />
+    <result column="m_material" property="m_material" jdbcType="VARCHAR" />
+    <result column="m_step" property="m_step" jdbcType="VARCHAR" />
+    <result column="m_summary" property="m_summary" jdbcType="VARCHAR" />
+    <result column="m_time" property="m_time" jdbcType="TIMESTAMP" />
+    <result column="m_likes" property="m_likes" jdbcType="INTEGER" />
+    <result column="u_id" property="u_id" jdbcType="INTEGER" />
+    <result column="u_pic" property="u_pic" jdbcType="VARCHAR" />
+    <result column="m_remark" property="m_remark" jdbcType="VARCHAR" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from menu
     where m_id = #{m_id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guozengxin.miedao.model.Menu">
-    <selectKey keyProperty="m_id" order="AFTER" resultType="java.lang.Integer">
+  <insert id="insert" parameterType="com.guozengxin.miedao.model.Menu" >
+    <selectKey resultType="java.lang.Integer" keyProperty="m_id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into menu (m_name, m_title, m_pic, 
-      m_material, m_step, m_summary, 
-      m_time, m_likes, u_id, 
-      u_pic, m_remark)
-    values (#{m_name,jdbcType=VARCHAR}, #{m_title,jdbcType=VARCHAR}, #{m_pic,jdbcType=VARCHAR}, 
-      #{m_material,jdbcType=VARCHAR}, #{m_step,jdbcType=VARCHAR}, #{m_summary,jdbcType=VARCHAR},
-      #{m_time,jdbcType=TIMESTAMP}, #{m_likes,jdbcType=INTEGER}, #{u_id,jdbcType=INTEGER}, 
-      #{u_pic,jdbcType=VARCHAR}, #{m_remark,jdbcType=VARCHAR})
+    insert into menu (m_name, m_pic, m_material, 
+      m_step, m_summary, m_time, 
+      m_likes, u_id, u_pic, 
+      m_remark)
+    values (#{m_name,jdbcType=VARCHAR}, #{m_pic,jdbcType=VARCHAR}, #{m_material,jdbcType=VARCHAR}, 
+      #{m_step,jdbcType=VARCHAR}, #{m_summary,jdbcType=VARCHAR}, #{m_time,jdbcType=TIMESTAMP}, 
+      #{m_likes,jdbcType=INTEGER}, #{u_id,jdbcType=INTEGER}, #{u_pic,jdbcType=VARCHAR}, 
+      #{m_remark,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.Menu">
+  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.Menu" >
     update menu
     set m_name = #{m_name,jdbcType=VARCHAR},
-      m_title = #{m_title,jdbcType=VARCHAR},
       m_pic = #{m_pic,jdbcType=VARCHAR},
       m_material = #{m_material,jdbcType=VARCHAR},
       m_step = #{m_step,jdbcType=VARCHAR},
@@ -47,16 +45,15 @@
       m_remark = #{m_remark,jdbcType=VARCHAR}
     where m_id = #{m_id,jdbcType=INTEGER}
   </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select m_id, m_name, m_title, m_pic, m_material, m_step, m_summary, m_time, m_likes, 
-    u_id, u_pic, m_remark
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select m_id, m_name, m_pic, m_material, m_step, m_summary, m_time, m_likes, u_id, 
+    u_pic, m_remark
     from menu
     where m_id = #{m_id,jdbcType=INTEGER}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap">
-    select m_id, m_name, m_title, m_pic, m_material, m_step, m_summary, m_time, m_likes, 
-    u_id, u_pic, m_remark
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select m_id, m_name, m_pic, m_material, m_step, m_summary, m_time, m_likes, u_id, 
+    u_pic, m_remark
     from menu
   </select>
-
 </mapper>

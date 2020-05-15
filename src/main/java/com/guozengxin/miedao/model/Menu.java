@@ -7,8 +7,6 @@ public class Menu {
 
     private String m_name;
 
-    private String m_title;
-
     private String m_pic;
 
     private String m_material;
@@ -41,14 +39,6 @@ public class Menu {
 
     public void setM_name(String m_name) {
         this.m_name = m_name == null ? null : m_name.trim();
-    }
-
-    public String getM_title() {
-        return m_title;
-    }
-
-    public void setM_title(String m_title) {
-        this.m_title = m_title == null ? null : m_title.trim();
     }
 
     public String getM_pic() {
@@ -121,24 +111,5 @@ public class Menu {
 
     public void setM_remark(String m_remark) {
         this.m_remark = m_remark == null ? null : m_remark.trim();
-    }
-
-    @Override
-    public String
-    toString() {
-        return "Menu{" +
-                "m_id=" + m_id +
-                ", m_name='" + m_name + '\'' +
-                ", m_title='" + m_title + '\'' +
-                ", m_pic='" + m_pic + '\'' +
-                ", m_material='" + m_material + '\'' +
-                ", m_step='" + m_step + '\'' +
-                ", m_summary='" + m_summary + '\'' +
-                ", m_time=" + m_time +
-                ", m_likes=" + m_likes +
-                ", u_id=" + u_id +
-                ", u_pic='" + u_pic + '\'' +
-                ", m_remark='" + m_remark + '\'' +
-                '}';
     }
 }

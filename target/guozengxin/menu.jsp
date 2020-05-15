@@ -50,8 +50,6 @@
 									|
 									<a href="register.jsp">注册</a>
 								</div>
-								<%--<div class="pull-left"><a href="about.jsp">关于豆果</a></div>
-								<div class="pull-left"><a href="contact.jsp">联系豆子</a></div>--%>
 								<div class="pull-left">
 									<div class="search" style="width: 150px;height: 30px; display: flex;color: black">
 										<input  style="width: 200px;height: 30px;margin-top: 8px" type="text" placeholder="请输入..." name="" id="" value="" />
@@ -145,170 +143,38 @@
 				</div>
 			</div>
 		</div>--%>
-		<div class="wares-box">
-			<div class="wares-info">
+		<div class="wares-box" id="box">
+			<%--<div class="wares-info">
 				<div class="wares">
 					<a href="menu-info.jsp?id='1'">
-						<img src="static/image/purchases/pur-12.png" alt="">
+						<img src="http://localhost:8080/image/menu/690x390_f0d984cdcdfdfe8fde33bc687af2e0c1.jpg" alt="">
 						<p class="title" style="color: black">鸡蛋干蒜薹炒虾仁</p>
 					</a>
-					<%--<p class="monney">&yen;50.00</p>--%>
+					&lt;%&ndash;<p class="monney">&yen;50.00</p>&ndash;%&gt;
 					<div class="chik-info">
-						<p><img src="static/image/personalCenter/xiaokeai.jpg" style="width: 30px"> admin</p>
+						<p><img src="static/image/personalCenter/xiaokeai.jpg" style="width: 30px"> <i>admin</i></p>
 						<p><img src="static/image/other/like2.png" style="width: 12px;margin-right: 10px;margin-bottom: 2px">0</p>
 					</div>
 				</div>
-				<%--<div class="wares">
+				&lt;%&ndash;<div class="wares">
 					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
+					<p class="title"></p>
 					<p class="monney">&yen;50.00</p>
 					<div class="chik-info">
 						<p>月售77件</p>
 						<p>包邮</p>
 					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-			</div>
-			<div class="wares-info">
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-			</div>
-			<div class="wares-info">
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-			</div>
-			<div class="wares-info">
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>
-				<div class="wares">
-					<img src="static/image/purchases/pur-10.png" alt="">
-					<p class="title">大韩帝国 参鸡汤 喝了会死人 宇宙第一 世界是韩国的</p>
-					<p class="monney">&yen;50.00</p>
-					<div class="chik-info">
-						<p>月售77件</p>
-						<p>包邮</p>
-					</div>
-				</div>--%>
-			</div>
+				</div>&ndash;%&gt;
+			</div>--%>
 		</div>
 		<div class="page-number">
-			<input type="button" value="1" class='page-btn'>
+			<%--<input type="button" value="1" class='page-btn'>
 			<input type="button" value="2" class='page-btn'>
 			<input type="button" value="3" class='page-btn'>
 			<input type="button" value="4" class='page-btn'>
 			<input type="button" value="&middot;&middot;&middot;" class='page-btn'>
 			<input type="button" value="下一页">
-			<input type="button" value="尾页">
+			<input type="button" value="尾页">--%>
 		</div>
 	</section>
 <!-- 我是邪恶的分割线 -->

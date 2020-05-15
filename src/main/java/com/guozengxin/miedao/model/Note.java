@@ -7,6 +7,8 @@ public class Note {
 
     private String n_pic;
 
+    private String n_content;
+
     private Integer u_id;
 
     private String u_pic;
@@ -31,6 +33,14 @@ public class Note {
 
     public void setN_pic(String n_pic) {
         this.n_pic = n_pic == null ? null : n_pic.trim();
+    }
+
+    public String getN_content() {
+        return n_content;
+    }
+
+    public void setN_content(String n_content) {
+        this.n_content = n_content == null ? null : n_content.trim();
     }
 
     public Integer getU_id() {

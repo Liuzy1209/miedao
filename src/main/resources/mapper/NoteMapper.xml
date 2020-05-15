@@ -1,33 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guozengxin.miedao.mapper.NoteMapper">
-  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.Note">
-    <id column="n_id" jdbcType="INTEGER" property="n_id" />
-    <result column="n_pic" jdbcType="VARCHAR" property="n_pic" />
-    <result column="u_id" jdbcType="INTEGER" property="u_id" />
-    <result column="u_pic" jdbcType="VARCHAR" property="u_pic" />
-    <result column="n_likes" jdbcType="INTEGER" property="n_likes" />
-    <result column="n_time" jdbcType="TIMESTAMP" property="n_time" />
-    <result column="n_remark" jdbcType="VARCHAR" property="n_remark" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.guozengxin.miedao.mapper.NoteMapper" >
+  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.Note" >
+    <id column="n_id" property="n_id" jdbcType="INTEGER" />
+    <result column="n_pic" property="n_pic" jdbcType="VARCHAR" />
+    <result column="n_content" property="n_content" jdbcType="VARCHAR" />
+    <result column="u_id" property="u_id" jdbcType="INTEGER" />
+    <result column="u_pic" property="u_pic" jdbcType="VARCHAR" />
+    <result column="n_likes" property="n_likes" jdbcType="INTEGER" />
+    <result column="n_time" property="n_time" jdbcType="TIMESTAMP" />
+    <result column="n_remark" property="n_remark" jdbcType="VARCHAR" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from note
     where n_id = #{n_id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guozengxin.miedao.model.Note">
-    <selectKey keyProperty="n_id" order="AFTER" resultType="java.lang.Integer">
+  <insert id="insert" parameterType="com.guozengxin.miedao.model.Note" >
+    <selectKey resultType="java.lang.Integer" keyProperty="n_id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into note (n_pic, u_id, u_pic, 
-      n_likes, n_time, n_remark
-      )
-    values (#{n_pic,jdbcType=VARCHAR}, #{u_id,jdbcType=INTEGER}, #{u_pic,jdbcType=VARCHAR}, 
-      #{n_likes,jdbcType=INTEGER}, #{n_time,jdbcType=TIMESTAMP}, #{n_remark,jdbcType=VARCHAR}
-      )
+    insert into note (n_pic, n_content, u_id, 
+      u_pic, n_likes, n_time, 
+      n_remark)
+    values (#{n_pic,jdbcType=VARCHAR}, #{n_content,jdbcType=VARCHAR}, #{u_id,jdbcType=INTEGER}, 
+      #{u_pic,jdbcType=VARCHAR}, #{n_likes,jdbcType=INTEGER}, #{n_time,jdbcType=TIMESTAMP}, 
+      #{n_remark,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.Note">
+  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.Note" >
     update note
     set n_pic = #{n_pic,jdbcType=VARCHAR},
+      n_content = #{n_content,jdbcType=VARCHAR},
       u_id = #{u_id,jdbcType=INTEGER},
       u_pic = #{u_pic,jdbcType=VARCHAR},
       n_likes = #{n_likes,jdbcType=INTEGER},
@@ -35,14 +37,13 @@
       n_remark = #{n_remark,jdbcType=VARCHAR}
     where n_id = #{n_id,jdbcType=INTEGER}
   </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select n_id, n_pic, u_id, u_pic, n_likes, n_time, n_remark
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select n_id, n_pic, n_content, u_id, u_pic, n_likes, n_time, n_remark
     from note
     where n_id = #{n_id,jdbcType=INTEGER}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap">
-    select n_id, n_pic, u_id, u_pic, n_likes, n_time, n_remark
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select n_id, n_pic, n_content, u_id, u_pic, n_likes, n_time, n_remark
     from note
   </select>
-
 </mapper>

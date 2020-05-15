@@ -173,11 +173,13 @@ document.ondrop = function(e){e.preventDefault();}
 
 
 //上传封面图
-var url = null;
+var m_pic = '';
+var fileObj = [];
 function uploadCoverImg() {
+	var url = null;
 
-
-	var fileObj = document.getElementById("coverImageUrl").files[0];
+	fileObj = document.getElementById("coverImageUrl").files[0];
+	m_pic = document.getElementById("coverImageUrl").files[0].name;
 	if (window.createObjcectURL != undefined) {
 		url = window.createOjcectURL(fileObj);
 	} else if (window.URL != undefined) {
@@ -185,7 +187,7 @@ function uploadCoverImg() {
 	} else if (window.webkitURL != undefined) {
 		url = window.webkitURL.createObjectURL(fileObj);
 	}
-	console.log(url)
+	console.log(fileObj)
 
 	var image = [];
 	image.actual_url = url;
@@ -571,8 +573,8 @@ function checkBuZhou() {
 }*/
 
 
+
 function checkArtinfo() {
-	var m_pic = url;
 	console.log(m_pic)
 	var m_name =$("#cook_name").val();
 	console.log(m_name)

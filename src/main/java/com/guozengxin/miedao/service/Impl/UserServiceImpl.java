@@ -85,5 +85,11 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    //通过id查询用户名
+    @Override
+    public User findById(Integer u_id){
+        return userMapper.selectByPrimaryKey(u_id);
+    }
+
 
 }

@@ -75,21 +75,20 @@
     <div id="left">
         <div class="draft-tip mt20"><span>已保存到云端</span></div>
         <!--上传封面图-->
-
-            <input class="coverImageUrl" onchange="changecover()" type="file" name="image[]" id="coverImageUrl" value=""
+        <input class="coverImageUrl" onchange="changecover()" type="file" name="image" id="coverImageUrl" value=""
                accept="image/gif,image/jpeg,image/jpg,image/png,image/webp"
                style="opacity: 0; z-index: 2; width: 10px; left: 315px; top: 467px;">
+
         <!--上传步骤图-->
         <input type="file" name="image[]" class="buzhou" id="buzhou-file" onchange="uploadBuZhouImg();"
                accept="image/gif,image/jpeg,image/jpg,image/png,image/webp" multiple="multiple"
                style="position: absolute; display: block; opacity: 0; z-index: 2; width: 10px; left: 241px; top: 1460px;">
-        <form action="" class="mt20" id="upfood" method="post">
+        <form action="" class="mt20" id="upfood" method="post" >
             <!--封面图的url-->
             <input type="hidden" name="videoImgUrl" id="videoImgUrl" value="">
             <input type="text" name="coverImgUrl" id="coverImgUrl" value="" style="display: none;" hidden="">
-            <input type="hidden" name="cook_id" value="" id="cook_id">
             <div class="cover">
-                <div class="upbefore" id="uploadCookImage" onmousemove="movefile(event,'coverImageUrl')">
+                <div class="upbefore" id="uploadCookImage"  onmousemove="movefile(event,'coverImageUrl')">
                     <div class="tiptxt">添加菜谱成品图
                         <p>（建议尺寸1280*1024，支持上传图片格式有jpg、jpeg、png、gif、webp）</p>
                     </div>

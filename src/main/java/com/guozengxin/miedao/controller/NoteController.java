@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 /**
  * Author: 郭增鑫
  * Date:2020-05-11 20:08
@@ -32,4 +34,14 @@ public class NoteController {
         noteService.save(note);
         return ResponseResult.success(1);
     }
+
+    /*
+     * 查询所有笔记展示*/
+    @RequestMapping("/find_note_all.do")
+    @ResponseBody
+    public ResponseResult findAll(){
+        List<Note> notes = noteService.findAll();
+        return ResponseResult.success(notes);
+    }
+
 }

@@ -2,6 +2,8 @@ package com.guozengxin.miedao.service;
 
 import com.guozengxin.miedao.model.Note;
 
+import java.util.List;
+
 /**
  * Author: 郭增鑫
  * Date:2020-05-04 10:29
@@ -10,4 +12,6 @@ import com.guozengxin.miedao.model.Note;
 public interface NoteService {
 
     int save(Note note);
+
+    List<Note> findAll();
 }

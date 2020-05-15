@@ -24,4 +24,7 @@ public interface UserService {
 
     //注册
     ResponseResult register(User user);
+
+    //通过id查询用户名
+    User findById(Integer U_id);
 }

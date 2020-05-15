@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guozengxin.miedao.mapper.AdminMapper">
-  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.Admin">
-    <id column="a_id" jdbcType="INTEGER" property="a_id" />
-    <result column="a_name" jdbcType="VARCHAR" property="a_name" />
-    <result column="a_password" jdbcType="VARCHAR" property="a_password" />
-    <result column="a_remark" jdbcType="VARCHAR" property="a_remark" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.guozengxin.miedao.mapper.AdminMapper" >
+  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.Admin" >
+    <id column="a_id" property="a_id" jdbcType="INTEGER" />
+    <result column="a_name" property="a_name" jdbcType="VARCHAR" />
+    <result column="a_password" property="a_password" jdbcType="VARCHAR" />
+    <result column="a_remark" property="a_remark" jdbcType="VARCHAR" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from admin
     where a_id = #{a_id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guozengxin.miedao.model.Admin">
-    <selectKey keyProperty="a_id" order="AFTER" resultType="java.lang.Integer">
+  <insert id="insert" parameterType="com.guozengxin.miedao.model.Admin" >
+    <selectKey resultType="java.lang.Integer" keyProperty="a_id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into admin (a_name, a_password, a_remark
@@ -20,19 +20,19 @@
     values (#{a_name,jdbcType=VARCHAR}, #{a_password,jdbcType=VARCHAR}, #{a_remark,jdbcType=VARCHAR}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.Admin">
+  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.Admin" >
     update admin
     set a_name = #{a_name,jdbcType=VARCHAR},
       a_password = #{a_password,jdbcType=VARCHAR},
       a_remark = #{a_remark,jdbcType=VARCHAR}
     where a_id = #{a_id,jdbcType=INTEGER}
   </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select a_id, a_name, a_password, a_remark
     from admin
     where a_id = #{a_id,jdbcType=INTEGER}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap">
+  <select id="selectAll" resultMap="BaseResultMap" >
     select a_id, a_name, a_password, a_remark
     from admin
   </select>

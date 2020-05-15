@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guozengxin.miedao.mapper.MenuCollectMapper">
-  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.MenuCollect">
-    <id column="m_c_id" jdbcType="INTEGER" property="m_c_id" />
-    <result column="u_id" jdbcType="INTEGER" property="u_id" />
-    <result column="m_id" jdbcType="INTEGER" property="m_id" />
-    <result column="m_c_remark" jdbcType="VARCHAR" property="m_c_remark" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.guozengxin.miedao.mapper.MenuCollectMapper" >
+  <resultMap id="BaseResultMap" type="com.guozengxin.miedao.model.MenuCollect" >
+    <id column="m_c_id" property="m_c_id" jdbcType="INTEGER" />
+    <result column="u_id" property="u_id" jdbcType="INTEGER" />
+    <result column="m_id" property="m_id" jdbcType="INTEGER" />
+    <result column="m_c_remark" property="m_c_remark" jdbcType="VARCHAR" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from menu_collect
     where m_c_id = #{m_c_id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guozengxin.miedao.model.MenuCollect">
-    <selectKey keyProperty="m_c_id" order="AFTER" resultType="java.lang.Integer">
+  <insert id="insert" parameterType="com.guozengxin.miedao.model.MenuCollect" >
+    <selectKey resultType="java.lang.Integer" keyProperty="m_c_id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into menu_collect (u_id, m_id, m_c_remark
@@ -20,21 +20,20 @@
     values (#{u_id,jdbcType=INTEGER}, #{m_id,jdbcType=INTEGER}, #{m_c_remark,jdbcType=VARCHAR}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.MenuCollect">
+  <update id="updateByPrimaryKey" parameterType="com.guozengxin.miedao.model.MenuCollect" >
     update menu_collect
     set u_id = #{u_id,jdbcType=INTEGER},
       m_id = #{m_id,jdbcType=INTEGER},
       m_c_remark = #{m_c_remark,jdbcType=VARCHAR}
     where m_c_id = #{m_c_id,jdbcType=INTEGER}
   </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select m_c_id, u_id, m_id, m_c_remark
     from menu_collect
     where m_c_id = #{m_c_id,jdbcType=INTEGER}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap">
+  <select id="selectAll" resultMap="BaseResultMap" >
     select m_c_id, u_id, m_id, m_c_remark
     from menu_collect
   </select>
-
 </mapper>
